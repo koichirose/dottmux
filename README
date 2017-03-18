@@ -1,0 +1,7 @@
+Installation:
+
+	git clone https://github.com/koichirose/dottmux.git ~/.tmux
+
+Create symlinks:
+
+	ln -s ~/.tmux/tmux.conf ~/.tmux.conf
