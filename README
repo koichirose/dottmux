@@ -1,7 +1,11 @@
-Installation:
+Installation with oh my tmux (https://github.com/gpakosz/.tmux):
 
-	git clone https://github.com/koichirose/dottmux.git ~/.tmux
+	git clone https://github.com/gpakosz/.tmux.git
+	git clone https://github.com/koichirose/dottmux.git ~/.tmux_koichirose
+	ln -s -f .tmux/.tmux.conf
+	ln -s -f ~/.tmux_koichirose/.tmux.conf.local
 
-Create symlinks:
+Installation without oh my tmux:
 
-	ln -s ~/.tmux/tmux.conf ~/.tmux.conf
+    git clone https://github.com/koichirose/dottmux.git ~/.tmux
+    ln -s ~/.tmux/tmux.conf ~/.tmux.conf
