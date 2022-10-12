@@ -1,11 +1,11 @@
 Installation with oh my tmux (https://github.com/gpakosz/.tmux):
 
 	git clone https://github.com/gpakosz/.tmux.git ~/.tmux
-	git clone https://github.com/koichirose/dottmux.git ~/.tmux_koichirose
+	git clone git@github.com:koichirose/dottmux.git ~/.tmux_koichirose
 	ln -s -f .tmux/.tmux.conf
 	ln -s -f .tmux_koichirose/.tmux.conf.local
 
 Installation without oh my tmux:
 
-    git clone https://github.com/koichirose/dottmux.git ~/.tmux
+    git clone git@github.com:koichirose/dottmux.git ~/.tmux
     ln -s -f .tmux/.tmux.conf
