@@ -279,25 +279,11 @@ tmux_conf_copy_to_os_clipboard=true
 # increase history size
 set -g history-limit 10000
 
-# start with mouse mode enabled
-#set -g mouse on
-
-# force Vi mode
-#   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
-
-# replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
-
-# move status line to top
-#set -g status-position top
-
 # disable sound bell
 set -g bell-action none
 # # disable visual bell
 set -g visual-bell off
+
+should_send_hjkl="ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?|fzf)(diff)?$'"
+bind-key -n C-h  if-shell "$should_send_hjkl" 'send-keys C-h'   'previous-window'
+bind-key -n C-l  if-shell "$should_send_hjkl" 'send-keys C-l'   'next-window'
